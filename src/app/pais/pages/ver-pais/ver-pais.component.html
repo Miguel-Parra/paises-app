@@ -2,6 +2,7 @@
     Espere por favor ...
 </div>
 
+
 <ng-template #hayPais>
     <div class="row">
         <div class="col-12">
@@ -9,9 +10,10 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-4">
+        <div class="col-4 ">
             <h3>Bandera</h3>
-            <img [src]="pais.flags.svg" class="img-thumbnail">
+            <img [src]="pais.flags.svg" 
+            class="img-thumbnail animate__animated animate__bounce animate__delay">
         </div>
         <div class="col">
             <h3>Información</h3>
@@ -47,4 +49,5 @@
             <span class="badge bg-primary mr ">{{pais.translations['ita'].common}}</span>
         </div>
     </div>
+   
 </ng-template>

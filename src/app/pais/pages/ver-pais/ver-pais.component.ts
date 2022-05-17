@@ -14,16 +14,15 @@ export class VerPaisComponent implements OnInit {
   pais!: Country  //'!' --> pide a TypeScript que confie en nosotros
 
   constructor(
-    private _activatedaRoute: ActivatedRoute,
+    private _activatedRoute: ActivatedRoute,
     private _paisService: PaisService
   ) { }
 
   ngOnInit(): void {
-    this._activatedaRoute.params
+    this._activatedRoute.params
       .pipe(
-        switchMap(({ idPais }) => this._paisService.buscarPaisId(idPais)),
+        switchMap(({ idPais }) => this._paisService.buscarPaisId(idPais))
         // switchMap(( parametros) => this._paisService.buscarPaisId(parametros['idPais']))
-        tap(console.log)
       )
       .subscribe(
         (pais) => this.pais = pais[0],
