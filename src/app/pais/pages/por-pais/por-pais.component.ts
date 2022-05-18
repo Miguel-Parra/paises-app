@@ -23,7 +23,7 @@ export class PorPaisComponent {
   buscar(termino: string): void {
     this.hayError = false;
     this.paisesSugeridos = [];
-    this.termino = termino;
+    this.termino = termino; 
     this.paises = [];
     console.log(this.termino);
     const busqueda = this._paisService.buscarPais(this.termino);
